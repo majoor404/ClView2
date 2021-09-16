@@ -362,24 +362,31 @@ namespace ClView2
 
         public void ZoekEnSelText(object sender, EventArgs e)
         {
-            DataCL._MainForm.FileNaamStatusStrip.Text = "Zoek tekst";
-            // als je met de hand zoek hebt ingevuld, dan ook even opslaan in lijst
-            View.Focus();
-            toolStripComboZoek_TextChanged(this, null);
-            // zoek tekst welke staat in toolStripComboBox
-            if (toolStripComboZoek.Text.Length > 0)
+            if (View.Text.Length != 0)
             {
-                int start_zoek = DataCL._MainForm.View.SelectionStart + 1;
-                if (ZoekFromTop) start_zoek = 0;
-
-                int pos = View.Find(toolStripComboZoek.Text, start_zoek + 1, RichTextBoxFinds.None);
-
-                ViewTool.ZetSelectieInMidden();
-                if (pos == -1)
+                DataCL._MainForm.FileNaamStatusStrip.Text = "Zoek tekst";
+                // als je met de hand zoek hebt ingevuld, dan ook even opslaan in lijst
+                View.Focus();
+                toolStripComboZoek_TextChanged(this, null);
+                // zoek tekst welke staat in toolStripComboBox
+                if (toolStripComboZoek.Text.Length > 0)
                 {
-                    MessageBox.Show("Volgende Niet Gevonden!,\nZoek Vorige met shift F3");
+                    int start_zoek = DataCL._MainForm.View.SelectionStart + 1;
+                    if (ZoekFromTop) start_zoek = 0;
+
+                    int pos = View.Find(toolStripComboZoek.Text, start_zoek + 1, RichTextBoxFinds.None);
+
+                    ViewTool.ZetSelectieInMidden();
+                    if (pos == -1)
+                    {
+                        MessageBox.Show("Volgende Niet Gevonden!,\nZoek Vorige met shift F3");
+                    }
+                    ZoekFromTop = false;
                 }
-                ZoekFromTop = false;
+            }
+            else
+            {
+                _ = MessageBox.Show("Laad wel een file voordat u gaat zoeken in deze file.");
             }
         }
 
