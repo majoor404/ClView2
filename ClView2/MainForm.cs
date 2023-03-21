@@ -102,8 +102,6 @@ namespace ClView2
             {
             }
             //MessageBox.Show("3");
-            Opruim();
-
 
             if (arguments.Length > 1)
             {
@@ -1494,72 +1492,6 @@ namespace ClView2
         private void View_TextChanged(object sender, EventArgs e)
         {
             CloseView.Visible = ViewTool.TotaalAantalRegels() > 0 ? true : false; ;
-        }
-
-
-        // tijdens programeren zijn er soms oude ini of andere file, delete deze
-        private void Opruim()
-        {
-            /*
-            // worden nu opgeslagen in settings
-            if (File.Exists("U:\\PriveClView2.ini"))
-                File.Delete("U:\\PriveClView2.ini");
-            
-            */
-
-            /*
-                        string opslagnaam = Path.GetDirectoryName(DataCL.EigenIniFile.Path) + "\\";
-                        if (File.Exists(opslagnaam + "\\QL1.INFO"))
-                        {
-                            File.Delete(opslagnaam + "\\QL1.INFO");
-                        }
-
-                        if (File.Exists(opslagnaam + "\\QL2.INFO"))
-                        {
-                            File.Delete(opslagnaam + "\\QL2.INFO");
-                        }
-
-                        if (File.Exists(opslagnaam + "\\QL3.INFO"))
-                        {
-                            File.Delete(opslagnaam + "\\QL3.INFO");
-                        }
-
-                        if (File.Exists(opslagnaam + "\\QL4.INFO"))
-                        {
-                            File.Delete(opslagnaam + "\\QL4.INFO");
-                        }
-
-                        if (File.Exists(opslagnaam + "\\recent.dat"))
-                        {
-                            File.Delete(opslagnaam + "\\recent.dat");
-                        }
-
-                        DataCL.EigenIniFile.DeleteKey("Pin");
-                        DataCL.EigenIniFile.DeleteKey("CL1 text");
-                        DataCL.EigenIniFile.DeleteKey("CL2 text");
-                        DataCL.EigenIniFile.DeleteKey("CL3 text");
-                        DataCL.EigenIniFile.DeleteKey("CL4 text");
-
-                        DataCL.EigenIniFile.DeleteKey("CL1 ToolTipText");
-                        DataCL.EigenIniFile.DeleteKey("CL2 ToolTipText");
-                        DataCL.EigenIniFile.DeleteKey("CL3 ToolTipText");
-                        DataCL.EigenIniFile.DeleteKey("CL4 ToolTipText");
-
-                        DataCL.EigenIniFile.DeleteKey("Tab1 Naam");
-                        DataCL.EigenIniFile.DeleteKey("Tab2 Naam");
-                        DataCL.EigenIniFile.DeleteKey("Tab3 Naam");
-                        DataCL.EigenIniFile.DeleteKey("Tab4 Naam");
-
-                        DataCL.EigenIniFile.DeleteKey("Tab1 Filenaam");
-                        DataCL.EigenIniFile.DeleteKey("Tab2 Filenaam");
-                        DataCL.EigenIniFile.DeleteKey("Tab3 Filenaam");
-                        DataCL.EigenIniFile.DeleteKey("Tab4 Filenaam");
-
-                        DataCL.EigenIniFile.DeleteKey("Tab1");
-                        DataCL.EigenIniFile.DeleteKey("Tab2");
-                        DataCL.EigenIniFile.DeleteKey("Tab3");
-                        DataCL.EigenIniFile.DeleteKey("Tab4");
-                        */
         }
 
         /// <summary>
