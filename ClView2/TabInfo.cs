@@ -35,7 +35,7 @@ namespace ClView2
 
                 int bookmarkAantal = Convert.ToInt32(DataCL.TabsIniFile.Read("bookmarkcount", sectie));
 
-                for (int i = 0; i < bookmarkAantal; i++)
+                for (int i = 0; i < bookmarkAantal + 1; i++)
                 {
                     string naam = String.Format("BookMark{0}", i);
                     int bookmark = Convert.ToInt32(DataCL.TabsIniFile.Read(naam, sectie));
