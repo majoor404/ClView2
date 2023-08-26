@@ -1237,11 +1237,20 @@ namespace ClView2
 
                 }
                 // save gemaakte file
-                StatementForm SF = new StatementForm();
-                string opslag = Path.GetTempPath() + "temp.ls";
-                File.WriteAllText(@opslag, _TB.ToString());
-                ZetViewKleur ZKS = new ZetViewKleur(@opslag, SF.richTextBox);
-                SF.ShowDialog();
+
+                //StatementForm SF = new StatementForm();
+                //string opslag = Path.GetTempPath() + "temp.ls";
+                //File.WriteAllText(@opslag, _TB.ToString());
+                //ZetViewKleur ZKS = new ZetViewKleur(@opslag, SF.richTextBox);
+                //SF.ShowDialog();
+
+                string nieuwe_file_naam = DataCL.FileNaam;
+                nieuwe_file_naam = Path.GetFileName(nieuwe_file_naam);
+                nieuwe_file_naam = Path.ChangeExtension(nieuwe_file_naam, ".LS");
+                nieuwe_file_naam = Path.GetTempPath() + nieuwe_file_naam;
+                File.WriteAllText(@nieuwe_file_naam, _TB.ToString());
+                NieuweFileLaden(nieuwe_file_naam);
+
                 FileNaamStatusStrip.Text = "Gereed";
             }
         }
