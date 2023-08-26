@@ -148,12 +148,6 @@
       <DependentUpon>SaveNaarForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Settings.cs" />
-    <Compile Include="StatementForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="StatementForm.Designer.cs">
-      <DependentUpon>StatementForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="TabInfo.cs" />
     <Compile Include="Tabs.cs" />
     <Compile Include="TagsView.cs">
@@ -213,9 +207,6 @@
     </Compile>
     <EmbeddedResource Include="SaveNaarForm.resx">
       <DependentUpon>SaveNaarForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="StatementForm.resx">
-      <DependentUpon>StatementForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TagsView.resx">
       <DependentUpon>TagsView.cs</DependentUpon>
