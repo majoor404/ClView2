@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Runtime.InteropServices;
+using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -82,9 +83,9 @@ namespace ClView2
                     Zoek("Eb locatie", "*.EB");
                     //Zoek("Eb locatie", "*.XML");
                     break;
-                case "OPC data locatie":
-                    Zoek("OPC data locatie", "*.CSV");
-                    break;
+                //case "OPC data locatie":
+                //    Zoek("OPC data locatie", "*.CSV");
+                //    break;
                 case "C21":
                     Zoek("Conv 21 CL locatie", "*.CL");
                     Zoek("Ontwikkel conv 21 CL locatie", "*.CL");
@@ -153,7 +154,7 @@ namespace ClView2
                     Zoek("Ontwikkel conv 23 CL locatie", "*.CL");
                     Zoek("Historie conv 23 CL locatie", "*.CL");
                     break;
-                case "Zoek in Alle cl,eb,pnt en Opc Data":
+                case "Zoek in Alle cl,eb,pnt":
                     Zoek("Ontwikkel algemeen CL locatie", "*.EB");
                     Zoek("Algemeen CL locatie", "*.CL");
                     Zoek("Ontwikkel algemeen CL locatie", "*.CL");
@@ -363,47 +364,46 @@ namespace ClView2
                 CancelBut.Refresh();
                 Application.DoEvents();
 
-                Regex regex = new Regex(zoektekst);
-
-                Task t = Task.Run(() =>
-                {
-                    using (StreamReader reader = new StreamReader(filenaam))
-                    {
-                        string line;
-                        while ((line = reader.ReadLine()) != null)
-                        {
-                            // Try to match each line against the Regex.
-                            Match match = regex.Match(line);
-                            if (match.Success)
-                            {
-                                ret = true;
-                                break;
-                            }
-                        }
-                    }
+                //RegexOptions options = RegexOptions.IgnoreCase | RegexOptions.Compiled;
+                //Regex regex = new Regex(zoektekst,options);
 
 
-
-
-                    //using (FileStream fileStream = File.OpenRead(filenaam))
-                    //using (StreamReader streamReader = new StreamReader(fileStream, Encoding.UTF8, true, BufferSize))
+                //Task t = Task.Run(() =>
+                //{
+                    //using (StreamReader reader = new StreamReader(filenaam))
                     //{
-
                     //    string line;
-                    //    while ((line = streamReader.ReadLine()) != null && !IsCancelled)
+                    //    while ((line = reader.ReadLine()) != null)
                     //    {
-                    //        if (line.IndexOf(zoektekst, StringComparison.OrdinalIgnoreCase) >= 0)
+                    //        // Try to match each line against the Regex.
+                    //        Match match = regex.Match(line);
+                    //        if (match.Success)
                     //        {
                     //            ret = true;
                     //            break;
                     //        }
                     //    }
                     //}
-                });
-                if (!IsCancelled)
-                {
-                    t.Wait();
-                }
+
+                    using (FileStream fileStream = File.OpenRead(filenaam))
+                    using (StreamReader streamReader = new StreamReader(fileStream, Encoding.UTF8, true, BufferSize))
+                    {
+
+                        string line;
+                        while ((line = streamReader.ReadLine()) != null && !IsCancelled)
+                        {
+                            if (line.IndexOf(zoektekst, StringComparison.OrdinalIgnoreCase) >= 0)
+                            {
+                                ret = true;
+                                break;
+                            }
+                        }
+                    }
+                //});
+                //if (!IsCancelled)
+                //{
+                //    t.Wait();
+                //}
             }
             return ret;
         }

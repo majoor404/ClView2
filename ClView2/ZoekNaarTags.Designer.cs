@@ -67,16 +67,14 @@
             treeNode18});
             System.Windows.Forms.TreeNode treeNode20 = new System.Windows.Forms.TreeNode("Display locatie");
             System.Windows.Forms.TreeNode treeNode21 = new System.Windows.Forms.TreeNode("Eb locatie");
-            System.Windows.Forms.TreeNode treeNode22 = new System.Windows.Forms.TreeNode("OPC data locatie");
-            System.Windows.Forms.TreeNode treeNode23 = new System.Windows.Forms.TreeNode("Scada pnt locatie");
-            System.Windows.Forms.TreeNode treeNode24 = new System.Windows.Forms.TreeNode("Experion C300 locatie");
-            System.Windows.Forms.TreeNode treeNode25 = new System.Windows.Forms.TreeNode("Zoek in Alle cl,eb,pnt en Opc Data", new System.Windows.Forms.TreeNode[] {
+            System.Windows.Forms.TreeNode treeNode22 = new System.Windows.Forms.TreeNode("Scada pnt locatie");
+            System.Windows.Forms.TreeNode treeNode23 = new System.Windows.Forms.TreeNode("Experion C300 locatie");
+            System.Windows.Forms.TreeNode treeNode24 = new System.Windows.Forms.TreeNode("Zoek in Alle cl,eb,pnt", new System.Windows.Forms.TreeNode[] {
             treeNode19,
             treeNode20,
             treeNode21,
             treeNode22,
-            treeNode23,
-            treeNode24});
+            treeNode23});
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.ZoekStringTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -139,16 +137,14 @@
             treeNode20.Text = "Display locatie";
             treeNode21.Name = "Node16";
             treeNode21.Text = "Eb locatie";
-            treeNode22.Name = "Node17";
-            treeNode22.Text = "OPC data locatie";
-            treeNode23.Name = "Node3";
-            treeNode23.Text = "Scada pnt locatie";
-            treeNode24.Name = "Node4";
-            treeNode24.Text = "Experion C300 locatie";
-            treeNode25.Name = "Node0";
-            treeNode25.Text = "Zoek in Alle cl,eb,pnt en Opc Data";
+            treeNode22.Name = "Node3";
+            treeNode22.Text = "Scada pnt locatie";
+            treeNode23.Name = "Node4";
+            treeNode23.Text = "Experion C300 locatie";
+            treeNode24.Name = "Node0";
+            treeNode24.Text = "Zoek in Alle cl,eb,pnt";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode25});
+            treeNode24});
             this.treeView1.Size = new System.Drawing.Size(335, 476);
             this.treeView1.TabIndex = 0;
             // 

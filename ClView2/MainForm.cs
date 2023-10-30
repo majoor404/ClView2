@@ -1236,13 +1236,7 @@ namespace ClView2
                     _TB.Append(Environment.NewLine);
 
                 }
-                // save gemaakte file
-
-                //StatementForm SF = new StatementForm();
-                //string opslag = Path.GetTempPath() + "temp.ls";
-                //File.WriteAllText(@opslag, _TB.ToString());
-                //ZetViewKleur ZKS = new ZetViewKleur(@opslag, SF.richTextBox);
-                //SF.ShowDialog();
+                // save gemaakte file als filenaam.LS in temp dir.
 
                 string nieuwe_file_naam = DataCL.FileNaam;
                 nieuwe_file_naam = Path.GetFileName(nieuwe_file_naam);
