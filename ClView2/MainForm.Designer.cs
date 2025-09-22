@@ -91,6 +91,7 @@
             this.toolStripComboZoek = new System.Windows.Forms.ToolStripComboBox();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButtonZoekBut = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButtonHighLightRegex = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripZetBullit = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonFlagReverse = new System.Windows.Forms.ToolStripButton();
@@ -108,7 +109,6 @@
             this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripExit = new System.Windows.Forms.ToolStripButton();
             this.timer = new System.Windows.Forms.Timer(this.components);
-            this.toolStripButtonHighLightRegex = new System.Windows.Forms.ToolStripButton();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.popupMenu.SuspendLayout();
@@ -148,47 +148,47 @@
             // 
             this.openFileToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("openFileToolStripMenuItem.Image")));
             this.openFileToolStripMenuItem.Name = "openFileToolStripMenuItem";
-            this.openFileToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.openFileToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.openFileToolStripMenuItem.Text = "Open TDC File";
             this.openFileToolStripMenuItem.Click += new System.EventHandler(this.openFile_Click);
             // 
             // saveclFileToolStripMenuItem
             // 
             this.saveclFileToolStripMenuItem.Name = "saveclFileToolStripMenuItem";
-            this.saveclFileToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.saveclFileToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.saveclFileToolStripMenuItem.Text = "Save *cl File";
             this.saveclFileToolStripMenuItem.Click += new System.EventHandler(this.saveclFileToolStripMenuItem_Click);
             // 
             // toolStripMenuItem13
             // 
             this.toolStripMenuItem13.Name = "toolStripMenuItem13";
-            this.toolStripMenuItem13.Size = new System.Drawing.Size(177, 6);
+            this.toolStripMenuItem13.Size = new System.Drawing.Size(147, 6);
             // 
             // printSelectieToolStripMenuItem
             // 
             this.printSelectieToolStripMenuItem.Name = "printSelectieToolStripMenuItem";
-            this.printSelectieToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.printSelectieToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.printSelectieToolStripMenuItem.Text = "Print Selectie";
             this.printSelectieToolStripMenuItem.Click += new System.EventHandler(this.printSelectieToolStripMenuItem_Click);
             // 
             // printToolStripMenuItem
             // 
             this.printToolStripMenuItem.Name = "printToolStripMenuItem";
-            this.printToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.printToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.printToolStripMenuItem.Text = "Print...";
             this.printToolStripMenuItem.Click += new System.EventHandler(this.PrintToolStripMenuItem_Click);
             // 
             // toolStripMenuItem4
             // 
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(177, 6);
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(147, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("exitToolStripMenuItem.Image")));
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F10;
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -208,20 +208,20 @@
             // 
             this.editMode.Image = ((System.Drawing.Image)(resources.GetObject("editMode.Image")));
             this.editMode.Name = "editMode";
-            this.editMode.Size = new System.Drawing.Size(180, 22);
+            this.editMode.Size = new System.Drawing.Size(144, 22);
             this.editMode.Text = "Edit Mode";
             this.editMode.Click += new System.EventHandler(this.editMode_Click);
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(177, 6);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(141, 6);
             // 
             // copyMenu
             // 
             this.copyMenu.Name = "copyMenu";
             this.copyMenu.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
-            this.copyMenu.Size = new System.Drawing.Size(180, 22);
+            this.copyMenu.Size = new System.Drawing.Size(144, 22);
             this.copyMenu.Text = "Copy";
             this.copyMenu.Click += new System.EventHandler(this.copyMenu_Click);
             // 
@@ -230,7 +230,7 @@
             this.cutMenu.Enabled = false;
             this.cutMenu.Name = "cutMenu";
             this.cutMenu.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
-            this.cutMenu.Size = new System.Drawing.Size(180, 22);
+            this.cutMenu.Size = new System.Drawing.Size(144, 22);
             this.cutMenu.Text = "Cut";
             this.cutMenu.Click += new System.EventHandler(this.cutMenu_Click);
             // 
@@ -239,7 +239,7 @@
             this.pasteMenu.Enabled = false;
             this.pasteMenu.Name = "pasteMenu";
             this.pasteMenu.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.V)));
-            this.pasteMenu.Size = new System.Drawing.Size(180, 22);
+            this.pasteMenu.Size = new System.Drawing.Size(144, 22);
             this.pasteMenu.Text = "Paste";
             this.pasteMenu.Click += new System.EventHandler(this.pasteMenu_Click);
             // 
@@ -261,7 +261,7 @@
             // 
             this.zetVlagToolStripMenuItem.Name = "zetVlagToolStripMenuItem";
             this.zetVlagToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F2;
-            this.zetVlagToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
+            this.zetVlagToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
             this.zetVlagToolStripMenuItem.Text = "Zet Vlag";
             this.zetVlagToolStripMenuItem.Click += new System.EventHandler(this.toolStripZetBullit_Click);
             // 
@@ -269,7 +269,7 @@
             // 
             this.zoekToolStripMenuItem.Name = "zoekToolStripMenuItem";
             this.zoekToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F3;
-            this.zoekToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
+            this.zoekToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
             this.zoekToolStripMenuItem.Text = "Zoek Tekst";
             this.zoekToolStripMenuItem.Click += new System.EventHandler(this.ZoekEnSelText);
             // 
@@ -277,7 +277,7 @@
             // 
             this.zoekTekstReverseToolStripMenuItem.Name = "zoekTekstReverseToolStripMenuItem";
             this.zoekTekstReverseToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Shift | System.Windows.Forms.Keys.F3)));
-            this.zoekTekstReverseToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
+            this.zoekTekstReverseToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
             this.zoekTekstReverseToolStripMenuItem.Text = "Zoek Tekst Reverse";
             this.zoekTekstReverseToolStripMenuItem.Click += new System.EventHandler(this.ZoekEnSelTextReverse);
             // 
@@ -285,7 +285,7 @@
             // 
             this.gevondenSchermToolStripMenuItem.Name = "gevondenSchermToolStripMenuItem";
             this.gevondenSchermToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F4;
-            this.gevondenSchermToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
+            this.gevondenSchermToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
             this.gevondenSchermToolStripMenuItem.Text = "Gevonden Scherm";
             this.gevondenSchermToolStripMenuItem.Click += new System.EventHandler(this.GevondenSchermToolStripMenuItem_Click);
             // 
@@ -293,7 +293,7 @@
             // 
             this.zoekNaarTag.Name = "zoekNaarTag";
             this.zoekNaarTag.ShortcutKeys = System.Windows.Forms.Keys.F5;
-            this.zoekNaarTag.Size = new System.Drawing.Size(223, 22);
+            this.zoekNaarTag.Size = new System.Drawing.Size(224, 22);
             this.zoekNaarTag.Text = "Zoek Naar Tag";
             this.zoekNaarTag.Click += new System.EventHandler(this.zoekNaarTag_Click);
             // 
@@ -301,7 +301,7 @@
             // 
             this.expandCall.Name = "expandCall";
             this.expandCall.ShortcutKeys = System.Windows.Forms.Keys.F6;
-            this.expandCall.Size = new System.Drawing.Size(223, 22);
+            this.expandCall.Size = new System.Drawing.Size(224, 22);
             this.expandCall.Text = "Expand Call";
             this.expandCall.Click += new System.EventHandler(this.expandCall_Click);
             // 
@@ -309,8 +309,8 @@
             // 
             this.statmentToevoegen.Name = "statmentToevoegen";
             this.statmentToevoegen.ShortcutKeys = System.Windows.Forms.Keys.F9;
-            this.statmentToevoegen.Size = new System.Drawing.Size(223, 22);
-            this.statmentToevoegen.Text = "Staments Toevoegen";
+            this.statmentToevoegen.Size = new System.Drawing.Size(224, 22);
+            this.statmentToevoegen.Text = "Statements Toevoegen";
             this.statmentToevoegen.Click += new System.EventHandler(this.statmentToevoegen_Click);
             // 
             // optionsToolStripMenuItem
@@ -660,6 +660,17 @@
             this.toolStripButtonZoekBut.ToolTipText = "Zoek Tekst in File (F3)";
             this.toolStripButtonZoekBut.Click += new System.EventHandler(this.ZoekEnSelText);
             // 
+            // toolStripButtonHighLightRegex
+            // 
+            this.toolStripButtonHighLightRegex.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButtonHighLightRegex.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonHighLightRegex.Image")));
+            this.toolStripButtonHighLightRegex.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonHighLightRegex.Name = "toolStripButtonHighLightRegex";
+            this.toolStripButtonHighLightRegex.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButtonHighLightRegex.Text = "toolStripButton2";
+            this.toolStripButtonHighLightRegex.ToolTipText = "Kleur alle Regex Selectie in file";
+            this.toolStripButtonHighLightRegex.Click += new System.EventHandler(this.toolStripButtonHighLightRegex_Click);
+            // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
@@ -744,7 +755,7 @@
             this.CL1.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.CL1.LinkColor = System.Drawing.Color.LightCoral;
             this.CL1.Name = "CL1";
-            this.CL1.Size = new System.Drawing.Size(11, 22);
+            this.CL1.Size = new System.Drawing.Size(10, 22);
             this.CL1.Tag = "1";
             this.CL1.Text = " ";
             this.CL1.Click += new System.EventHandler(this.CL1_Click);
@@ -759,7 +770,7 @@
             this.CL2.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.CL2.LinkColor = System.Drawing.Color.LightCoral;
             this.CL2.Name = "CL2";
-            this.CL2.Size = new System.Drawing.Size(11, 22);
+            this.CL2.Size = new System.Drawing.Size(10, 22);
             this.CL2.Tag = "2";
             this.CL2.Text = " ";
             this.CL2.Click += new System.EventHandler(this.CL1_Click);
@@ -774,7 +785,7 @@
             this.CL3.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.CL3.LinkColor = System.Drawing.Color.LightCoral;
             this.CL3.Name = "CL3";
-            this.CL3.Size = new System.Drawing.Size(11, 22);
+            this.CL3.Size = new System.Drawing.Size(10, 22);
             this.CL3.Tag = "3";
             this.CL3.Text = " ";
             this.CL3.Click += new System.EventHandler(this.CL1_Click);
@@ -789,7 +800,7 @@
             this.CL4.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.CL4.LinkColor = System.Drawing.Color.LightCoral;
             this.CL4.Name = "CL4";
-            this.CL4.Size = new System.Drawing.Size(11, 22);
+            this.CL4.Size = new System.Drawing.Size(10, 22);
             this.CL4.Tag = "4";
             this.CL4.Text = " ";
             this.CL4.Click += new System.EventHandler(this.CL1_Click);
@@ -804,7 +815,7 @@
             this.CL5.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.CL5.LinkColor = System.Drawing.Color.LightCoral;
             this.CL5.Name = "CL5";
-            this.CL5.Size = new System.Drawing.Size(11, 22);
+            this.CL5.Size = new System.Drawing.Size(10, 22);
             this.CL5.Tag = "5";
             this.CL5.Text = " ";
             this.CL5.Click += new System.EventHandler(this.CL1_Click);
@@ -819,7 +830,7 @@
             this.CL6.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.CL6.LinkColor = System.Drawing.Color.LightCoral;
             this.CL6.Name = "CL6";
-            this.CL6.Size = new System.Drawing.Size(11, 22);
+            this.CL6.Size = new System.Drawing.Size(10, 22);
             this.CL6.Tag = "6";
             this.CL6.Text = " ";
             this.CL6.Click += new System.EventHandler(this.CL1_Click);
@@ -842,17 +853,6 @@
             // 
             this.timer.Interval = 500;
             this.timer.Tick += new System.EventHandler(this.Timer_Tick);
-            // 
-            // toolStripButtonHighLightRegex
-            // 
-            this.toolStripButtonHighLightRegex.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButtonHighLightRegex.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonHighLightRegex.Image")));
-            this.toolStripButtonHighLightRegex.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButtonHighLightRegex.Name = "toolStripButtonHighLightRegex";
-            this.toolStripButtonHighLightRegex.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButtonHighLightRegex.Text = "toolStripButton2";
-            this.toolStripButtonHighLightRegex.ToolTipText = "Kleur alle Regex Selectie in file";
-            this.toolStripButtonHighLightRegex.Click += new System.EventHandler(this.toolStripButtonHighLightRegex_Click);
             // 
             // MainForm
             // 
